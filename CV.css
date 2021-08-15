@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+  }
+
+  div.Education:hover,.header:hover,.MilitaryService:hover,.Employment:hover,.PersonalProject:hover,.Skills:hover,.Languages:hover {
+    background-color: rgb(145, 145, 167);
+  }
+
+  @font-face {
+    font-family: HeeboFont;
+    src: url(Heebo-Light.ttf.ttf);
+  }
+
+  body {
+   font-family: HeeboFont;
+   background-image: url("backgroup1.jpg");
+  
+  }
+ 
+ 
+  
+ h1{
+     text-align: center;
+     font-size: 60px;
+     color: rgb(12, 11, 11);
+ } 
+
+
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    font-family:HeeboFont ;
+    border: solid;
+    font-weight: bold;
+    
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header ' 
+      'Education Education MilitaryService MilitaryService Employment Employment'
+      'PersonalProject PersonalProject Skills Skills Languages Languages' 
+      'contact contact contact contact contact contact';
+    /*grid-column-gap: 10px; /*- if you want gap between the columns*/ 
+    
+  } 
+  
+  .Education,
+  .MilitaryService,
+  .Employment,
+  .PersonalProject,
+  .Skills,
+  .Languages {
+    padding: 10px;
+    height: 200px; /* Should be removed. Only for demonstration */
+    text-align: center;
+    border: solid;
+    font-family: HeeboFont;
+    /*vertical-align: middle;
+    line-height: 100px; */
+    font-size: 20px;
+    font-style:oblique;
+  }
+
+
+  img.grid-container {
+    height: 50px;
+    width: 50px;
+  }
+ 
+  
+
+  /* Style the left column */
+  .Education {
+    grid-area: Education;
+    place-items:center ;
+    background-color:#aaa;
+  }
+  
+  /* Style the middle column */
+  .MilitaryService {
+    grid-area: MilitaryService;
+    background-color:#bbb;
+  }
+  
+  /* Style the right column */
+  .Employment {
+    grid-area: Employment;
+    background-color:#ccc;
+  }
+
+  .PersonalProject{
+    grid-area: PersonalProject;
+    background-color:#ddd;
+  }
+
+  .Skills{
+    grid-area: Skills;
+    background-color:#eee;
+  }
+
+  .Languages{
+    grid-area: Languages;
+    background-color:#fff;
+  }
+
+
+
+  
+  /* Style the footer */
+  .Contact {
+    grid-area: contact;
+    /*background-color: #f1f1f1;*/
+    padding: 10px;
+    text-align: center;
+    /*background: linear-gradient(rgba(0,0,150,0.5),rgba(0,0,50,0.5),url("contact.jpg"));*/
+    background-size: cover;
+    background-position:center;
+    font-family: HeeboFont;
+    background-image: url("contact2.jpg");
+    /*margin-top: 10px;*/
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+  }
+  
+form{
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
+.form-control{
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color:#fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+input{
+  height: 30px;
+}
+
+form .submit {
+  margin-bottom: 20px;
+  background-color: rgb(145, 145, 167);
+  opacity: 0.6;
+  font-size: 20px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  height: 50px;
+}
+
+form .submit:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+  
+
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 700px) {
+    .grid-container  {
+      grid-template-areas: 
+      'header header header header header header ' 
+      'Education Education Education MilitaryService MilitaryService MilitaryService'
+      'Employment Employment Employment PersonalProject PersonalProject PersonalProject' 
+      'Skills Skills Skills Languages Languages Languages' 
+      'contact contact contact contact contact contact';
+    }
+  }
+
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+      'header  ' 
+      'Education '
+      'MilitaryService '
+      'Employment' 
+      'PersonalProject' 
+      'Skills' 
+      'Languages'
+      'contact';
+    }
+  }
+
+
