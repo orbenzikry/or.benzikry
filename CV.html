@@ -6,12 +6,13 @@
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0,">
         <link rel="stylesheet" href="CV.css">
+        <script async src="cv.js"></script>
 
     </head>
 
-    <body>
+    <body onload="ChangeHeaderOnLoad()">
 
-<h1>Or Ben Zikry</h1>
+<h1 id="Title">Or Ben Zikry</h1>
 <div class="grid-container">
   <div class="header">
     About Me<br>
@@ -38,7 +39,8 @@
   </div>
   
   <div class="Contact">
-  <h2>Contact Me</h2>
+    <p class="line anim-typewriter">Contact Me!</p>
+    
   <div class="contact-form">
     <form id="contact-form" method="post" action="">
       <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
