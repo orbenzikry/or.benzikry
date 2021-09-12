@@ -6,7 +6,7 @@
   }
 
   div.Education:hover,.header:hover,.MilitaryService:hover,.Employment:hover,.PersonalProject:hover,.Skills:hover,.Languages:hover {
-    background-image: url("back4.jpg");
+    background-image: url("../images/back4.jpg");
     /*transform: scale(1,1.05);*/
   }
 
@@ -17,7 +17,7 @@
 
   body {
    
-   background-image: url("back4.jpg");
+   background-image: url("../images/back4.jpg");
    font-family:'Yomogi', cursive;
   
   }
